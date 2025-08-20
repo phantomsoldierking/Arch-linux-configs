@@ -1,0 +1,132 @@
+/* Minimal Waybar CSS - Reduced Width/Thickness for HyDE */
+
+/* Import HyDE theme dependencies */
+@import "groups/pill.css";
+@import "groups/pill-up.css";
+@import "groups/pill-right.css";
+@import "groups/pill-down.css";
+@import "groups/pill-left.css";
+@import "groups/pill-in.css";
+@import "groups/pill-out.css";
+@import "groups/leaf.css";
+@import "groups/leaf-inverse.css";
+@import "../../../../.config/waybar/includes/border-radius.css";
+@import "../../../../.config/waybar/includes/global.css";
+
+/* Main window - reduced thickness */
+window#waybar {
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Groups/Islands - minimal padding */
+#leaf, #leaf-inverse, #leaf-up, #leaf-down, #leaf-right, #leaf-left,
+#pill, #pill-right, #pill-left, #pill-down, #pill-up, #pill-in, #pill-out {
+    background-color: @main-bg;
+    border-style: solid;
+    border-color: @main-bg;
+    border-width: 1px; /* Thinner borders */
+}
+
+/* Workspace buttons - compact */
+#workspaces button {
+    padding: 0 0.4em; 
+    margin: 0 0.05em; 
+    color: @wb-act-bg;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+#workspaces button.active {
+    background: @wb-act-bg;
+    color: @wb-act-fg;
+    padding: 0 0.6em; 
+    margin: 0 0.1em; 
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    transition: all 0.2s ease;
+}
+
+/* Module containers - minimal spacing */
+.modules-left, .modules-center, .modules-right {
+    padding: 0 0.2em; 
+    margin: 0 0.1em; 
+}
+
+/* Module labels - compact */
+label.module {
+    padding: 0em 0.3em;
+    margin: 0.05em;
+    min-height: 18px;
+}
+
+/* Horizontal bars (top/bottom) */
+window#waybar.top #leaf, window#waybar.top #pill,
+window#waybar.bottom #leaf, window#waybar.bottom #pill,
+window#waybar.top #leaf-inverse, window#waybar.top #pill-right,
+window#waybar.bottom #leaf-inverse, window#waybar.bottom #pill-left {
+    padding: 0em 0.5em;
+}
+
+/* Vertical bars (left/right) */
+window#waybar.left #leaf, window#waybar.left #pill,
+window#waybar.right #leaf, window#waybar.right #pill {
+    padding: 0em 0.1em;
+}
+
+/* Buttons - minimal sizing */
+button {
+    margin: 0 0.05em; 
+    padding: 0 0.3em; 
+    border: none;
+    min-height: 18px;
+    min-width: 18px;
+}
+
+/* Tooltip - compact */
+tooltip {
+    background: @main-bg;
+    color: @wb-act-bg;
+    border-width: 1px;
+    border-color: @main-fg;
+    font-size: 11px;
+    padding: 0em 0.4em;
+}
+
+/* Tray - minimal spacing */
+#tray menu * {
+    min-height: 1.2em;
+}
+
+#tray menu separator {
+    min-height: 0.05em;
+}
+
+/* Clock - larger font size */
+#clock {
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+/* custom/mediaplayer module */
+window#waybar #pill #custom-mediaplayer,
+window#waybar #pill button#custom-mediaplayer,
+window#waybar #pill #custom-mediaplayer label {
+    padding: 0 0.8em;
+    min-width: 220px;
+    font-size: 8px;
+    font-weight: 500;
+    font-style: italic;
+    color: green;
+}
+
+/* Narrow scope for custom/mediaplayer inside left pill group */
+#left2 #custom-mediaplayer,
+#left2 button#custom-mediaplayer,
+#left2 #custom-mediaplayer label {
+    min-width: 220px;
+}

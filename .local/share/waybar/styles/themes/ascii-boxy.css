@@ -1,0 +1,73 @@
+/* ascii-boxy.css — A HyDE-compatible ASCII style theme */
+
+/* Inherit theme variables like background, foreground, accent from HyDE's root theme */
+@import "../base.css";
+
+/* Reset all border radii to make sharp corners */
+* {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* General boxy look */
+window#waybar {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "Monospace", "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+    font-size: 14px;
+    border-top: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Make modules look like retro terminal boxes */
+#workspaces button,
+#clock,
+#battery,
+#pulseaudio,
+#pulseaudio#microphone,
+#network,
+#tray,
+#backlight,
+#cpu,
+#memory,
+#custom/*,
+#group/pill#left1,
+#group/pill#left2,
+#group/pill#center,
+#group/pill#right1,
+#group/pill#right2,
+#group/pill#right3 {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px dashed var(--accent);
+    color: var(--foreground);
+    padding: 4px 6px;
+    margin: 2px;
+    font-weight: bold;
+}
+
+/* Hover effect */
+#workspaces button:hover,
+#tray menuitem:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    text-shadow: none;
+}
+
+/* Active workspace */
+#workspaces button.active {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    background-color: #ff005f;
+    color: white;
+}
+
+/* Optional separators */
+.separator {
+    color: var(--accent);
+    padding: 0 5px;
+    content: " | ";
+}

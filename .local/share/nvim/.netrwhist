@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/spike/.config/nvim'
+let g:netrw_dirhist_0='/home/spike/Phantom/projects/learn_golang/Simple_web_server'
+let g:netrw_dirhist_9='/home/spike/Phantom/projects/learn_golang'
+let g:netrw_dirhist_8='/home/spike/.config/nvim/after/plugin'
+let g:netrw_dirhist_7='/home/spike/.config/nvim'
+let g:netrw_dirhist_6='/home/spike/.config/nvim/after/plugin'
+let g:netrw_dirhist_5='/home/spike/.config/nvim/after'
+let g:netrw_dirhist_4='/home/spike/.config/nvim'
+let g:netrw_dirhist_3='/home/spike/.config/nvim/lua'
+let g:netrw_dirhist_2='/home/spike/.config/nvim/lua/phantomsoldierking'

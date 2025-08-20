@@ -1,0 +1,7 @@
+{
+  "custom/music": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "waybar-module-music",
+  }
+}
