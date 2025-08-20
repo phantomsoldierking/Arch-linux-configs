@@ -1,0 +1,8 @@
+{
+  "modules": {
+    "left": ["workspaces"],
+    "center": ["clock"],
+    "right": ["systemtray"]  // removed notifications
+  }
+}
+
